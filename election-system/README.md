@@ -14,8 +14,8 @@ Candidate A, Candidate B, Candidate C, ...
 The first row contains the list of candidates separated by commas. Every subsequent row is one ballot, with each value being the preference given to the respective candidate (for example, if a value of 1 is found in the third position in a row, it corresponds to first preference being given to the third candidate).
 
 To run the program, the call will be:
-`py prefvoting.py ballots.csv`
-`py` is the python program call, may take on a different form depending on install. `ballots.csv` is the ballots to process.
+`py prefvoting.py ballots.csv num_roles`
+`py` is the python program call, may take on a different form depending on install. `ballots.csv` is the ballots to process. `num_roles` is the number of roles available.
 
 The provided `sample-ballot.csv` corresponds to the following table:
 | Ballot | Candidate A | Candidate B | Candidate C |

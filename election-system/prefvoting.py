@@ -110,17 +110,20 @@ def rem_lowest(candidates, prefs):
 
 
 def main():
-    if len(sys.argv) <= 1:
-        print("Please specify ballot csv in commandline when executing.")
+    if len(sys.argv) <= 2:
+        print("Please specify ballot csv and number of positions in commandline when executing.")
         exit()
     filename = sys.argv[1]
+    num_roles = int(sys.argv[2])
     candidates, ballots = read_in(filename)
     prefs = prim_pref(candidates, ballots)
     print("===== Prelim done, removing candidates =====")
-    while len(prefs) > 1:
+    while len(prefs) > num_roles:
         print(f"Current vote counts: {sort_prefs(prefs)}")
         prefs = rem_lowest(candidates, prefs)
-    print(f"Winner is {prefs.keys()[0]}.")
+    print("Winner(s) are:")
+    for i in range(num_roles):
+        print(f"    {list(prefs.keys())[i]}")
 
 
 if __name__ == "__main__":
