@@ -19,6 +19,7 @@ To run the program, the call will be:
 
 The provided `sample-ballot.csv` corresponds to the following table:
 | Ballot | Candidate A | Candidate B | Candidate C |
+| --- | --- | --- | --- |
 | 0 | 1 | 2 | 3 |
 | 1 | 2 | 3 | 1 |
 | 2 | 1 | 3 | 2 |
